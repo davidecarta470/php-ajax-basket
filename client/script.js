@@ -12,7 +12,7 @@ const app = new Vue({
       axios.get(url).then(r=>{
         this.logoAndMatches=r.data;
         
-        this.getLogo(this.logoAndMatches)
+        this.partLogoAndMetches(this.logoAndMatches)
       })
       .catch(e=>{
         console.log('errore------->>>',e)
@@ -28,15 +28,13 @@ const app = new Vue({
     },
 
 
-    getLogo(array){
+    partLogoAndMetches(array){
       this.onlyMatches=[]
       array.forEach(el => {
         if('nbaLogo' in el) {
           this.logo=el.nbaLogo
-          console.log(this.logo)
         }else{
           this.onlyMatches.push(el)
-          console.log(this.onlyMatches)
         }
       });
       this.onlyMatches.forEach(el => {
