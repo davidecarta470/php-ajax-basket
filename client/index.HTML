@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <img :src="logo" alt="" style="width: 150px;margin: 0 40px;">
+      <div>
+        <span>HOME : </span>
+        <select name="" id="" @change="getCity()">
+          <option value="">Seleziona una Città</option>
+          <option v-for="city in cities" :value="city">{{city}}</option>
+        </select>
+      </div>
+    </header>
+    <main>
+      
+      <div class="container">
+        <div class="item" v-for="match in onlyMatches">
+
+          <div class="team">
+            <h4>{{match.home_team["city"]}} {{match.home_team["nickname"]}}</h4>
+          </div>
+          <div class="img">
+            <img :src='match.home_team["logo"]' alt="">
+          </div>
+          <div class="score">
+            <h2>{{match.home_team["score"]}}</h2>
+          </div>
+
+          <div class="arena">
+            <h5>{{match.arena}} </h5>
+            <h5>{{match.city}}</h5>
+          </div>
+          
+          <div class="score">
+            <h2>{{match.away_team["score"]}}</h2>
+          </div>
+
+          <img :src='match.away_team["logo"]' alt="">
+
+          <div class="team">
+            <h4>{{match.away_team["city"]}} {{match.away_team["nickname"]}}</h4>
+          </div>
+        </div>
+      </div>
+      
+    </main>
+  </div>
+</body>
+
+  <!-- axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- vue -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <!-- js -->
+  <script src="script.js"></script>
+</html>

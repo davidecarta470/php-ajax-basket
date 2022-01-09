@@ -1,0 +1,50 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  font-family: 'Acme', sans-serif;
+  font-family: 'Outfit', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  background-color: rgb(133, 133, 133);
+  color:rgb(255, 255, 255);
+}
+header{
+  height:100px;
+  background-color:black;
+  color:white;
+  display:flex;
+  align-items: center;
+
+  
+}
+
+h1{
+  margin:0 40px;
+}
+.container{
+  width:80%;
+  margin:auto;
+}
+.item{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  height:80px;
+  background-color: white;
+  color:rgb(0, 0, 0);
+  margin:20px 0;
+  padding:0 20px;
+}
+img{
+  width:60px;
+}
+.team,.score,.arena{
+  text-align: center;
+  width: 150px;
+}
+main .loading{
+  color:red;
+}
