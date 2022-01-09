@@ -12,17 +12,25 @@ body{
   color:rgb(255, 255, 255);
 }
 header{
-  height:100px;
-  background-color:black;
-  color:white;
-  display:flex;
-  align-items: center;
+  background-color: black;
 
-  
+}
+.header-container{
+  height:100px;
+  width:80%;
+  margin:0 auto;
+  display: flex;
+  align-items:center;
+  justify-content:space-between;
+}  
+
+header img{
+  width:150px;
+  margin:0 40px;
 }
 
 h1{
-  margin:0 40px;
+  margin:0px, 40px;
 }
 .container{
   width:80%;
@@ -36,8 +44,9 @@ h1{
   background-color: white;
   color:rgb(0, 0, 0);
   margin:20px 0;
-  padding:0 20px;
+  padding:0px, 20px;
 }
+
 img{
   width:60px;
 }
@@ -45,6 +54,4 @@ img{
   text-align: center;
   width: 150px;
 }
-main .loading{
-  color:red;
-}
+

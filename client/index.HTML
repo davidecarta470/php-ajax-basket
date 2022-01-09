@@ -10,13 +10,15 @@
 <body>
   <div id="app">
     <header>
-      <img :src="logo" alt="" style="width: 150px;margin: 0 40px;">
-      <div>
-        <span>HOME : </span>
-        <select name="" id="" @change="getCity()">
-          <option value="">Seleziona una Città</option>
-          <option v-for="city in cities" :value="city">{{city}}</option>
-        </select>
+      <div class="header-container">
+        <div>
+          <span><strong>HOME : </strong></span>
+          <select name="" id="" @change="getCity()">
+            <option value="">Seleziona una Città</option>
+            <option v-for="city in cities" :value="city">{{city}}</option>
+          </select>
+        </div>
+        <img :src="logo" alt="">
       </div>
     </header>
     <main>
